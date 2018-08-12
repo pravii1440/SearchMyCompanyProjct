@@ -1,0 +1,16 @@
+
+
+
+
+ <div class="col-lg-7 searchBoxPosition well searchBg">
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="companyName" list="showList" placeholder="Search for Company..." ng-change="companyLookUp(companyName)">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" ng-click="displayDetails(companyName)">Submit</button>
+      </span>
+      <datalist id={{lookUpList}}>
+            <option ng-repeat="companyData in companiesList" value="{{companyData.companyName}}"></option>
+       </datalist>
+    </div>
+  </div>
+

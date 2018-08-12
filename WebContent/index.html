@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search My Company Info</title>
+</head>
+
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="js/angular-growl.min.js"></script> 
+<script type="text/javascript" src="controller/SearchCtrl.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/angular-growl.min.css"/> 
+<link rel="stylesheet" href="css/customize.css"/> 
+<body class="bodyColor" ng-controller='searchMyCompCtrl'>
+<div class="container" ng-init="intialize()">
+  <div ng-include='"View/searchCompany.html"' ng-if="intialView"></div>
+  <div ng-include='"View/displayCompany.html"' ng-if="!intialView"></div>
+  <div ng-view></div>
+  </div>
+</body>
+</html>
